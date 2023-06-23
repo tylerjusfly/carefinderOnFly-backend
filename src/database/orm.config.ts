@@ -8,10 +8,10 @@ export const databaseConfig: TypeOrmModuleOptions = {
   port: 5432,
   host: dbConfiguration.DatabaseHost,
   database: dbConfiguration.DatabaseName,
-  // ssl: {
-  //   require: true,
-  //   rejectUnauthorized: false,
-  // },
+  ssl: {
+    // require: true,
+    rejectUnauthorized: false,
+  },
   synchronize: true, // do not for to turn to false in production
   autoLoadEntities: true,
   entities: [__dirname + 'src/**/*.entity{ .ts,.js}'],
