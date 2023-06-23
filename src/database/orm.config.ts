@@ -4,9 +4,9 @@ import { dbConfiguration } from 'src/utils/config';
 export const databaseConfig: TypeOrmModuleOptions = {
   type: 'postgres',
   username: dbConfiguration.DatabaseUser,
-  password: 'tylerjusfly1996',
+  password: dbConfiguration.DatabasePassword,
   port: 5432,
-  host: 'localhost',
+  host: dbConfiguration.DatabaseHost,
   database: dbConfiguration.DatabaseName,
   // ssl: {
   //   require: true,
