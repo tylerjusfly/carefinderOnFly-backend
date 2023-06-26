@@ -45,7 +45,7 @@ export class HospitalService {
 
     const page = options.page - 1;
 
-    query.where('h.approved = :status', { status: '1' });
+    query.where('h.approved = :status', { status: '0' });
 
     // Search results for  hospital
     if (hospitalName && hospitalName !== '') {
