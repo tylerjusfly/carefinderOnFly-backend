@@ -3,3 +3,7 @@ export class CreateHospitalDto {
   location: string;
   contact: string;
 }
+
+export class UpdateHospitalDto {
+  approved: string;
+}

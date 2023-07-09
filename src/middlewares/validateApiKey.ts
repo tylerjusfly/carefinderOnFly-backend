@@ -18,9 +18,7 @@ export class ValidateApiKeyMiddleware implements NestMiddleware {
 
     // If api key does not exist
     if (!headersApiKey) {
-      return res
-        .status(404)
-        .json({ success: false, message: 'x-api-key is required' });
+      return res.status(404).json({ success: false, message: 'x-api-key is required' });
     }
 
     // Official Site should ByPass
@@ -44,9 +42,3 @@ export class ValidateApiKeyMiddleware implements NestMiddleware {
     next();
   }
 }
-
-// @InjectEntityManager() private postManager: EntityManager,
-// const postWithEntityManager = await this.postManager
-//       .createQueryBuilder(Post, "post")
-//       .where("post.id= :postId", { postId: id })
-//       .getOne()

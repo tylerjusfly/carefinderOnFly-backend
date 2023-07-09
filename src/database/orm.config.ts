@@ -12,7 +12,7 @@ export const databaseConfig: TypeOrmModuleOptions = {
     // require: true,
     rejectUnauthorized: false,
   },
-  synchronize: true, // do not for to turn to false in production
+  synchronize: true, // do not turn to true in production
   autoLoadEntities: true,
   entities: [__dirname + 'src/**/*.entity{ .ts,.js}'],
   migrations: [__dirname + '/**/'],
