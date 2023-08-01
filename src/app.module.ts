@@ -8,9 +8,10 @@ import { HospitalModule } from './modules/hospital/hospital.module';
 import { MailModule } from './modules/mail/mail.module';
 import { ApiKeyUser } from './apikey.entity';
 import { ValidateApiKeyMiddleware } from './middlewares/validateApiKey';
+import { AdminModule } from './modules/admin/admin.module';
 
 @Module({
-  imports: [HospitalModule, TypeOrmModule.forRoot(databaseConfig), MailModule, TypeOrmModule.forFeature([ApiKeyUser])],
+  imports: [HospitalModule, AdminModule, TypeOrmModule.forRoot(databaseConfig), MailModule, TypeOrmModule.forFeature([ApiKeyUser])],
   controllers: [AppController],
   providers: [AppService],
 })
